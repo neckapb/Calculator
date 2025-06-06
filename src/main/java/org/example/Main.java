@@ -8,5 +8,6 @@ public class Main
     {
       Calc calculator = new Calc();
       calculator.summ(7, 8);
+      calculator.difference(13, 4);
     }
 }
