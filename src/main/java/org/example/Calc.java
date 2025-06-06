@@ -2,8 +2,11 @@ package org.example;
 
 public class Calc
 {
-    public void summ()
+    public int summ(int a, int b)
     {
-      return;
+        int result;
+        result = a + b;
+        System.out.printf("Сумма %d и %d равна %d\n", a, b, result);
+        return result;
     }
 }

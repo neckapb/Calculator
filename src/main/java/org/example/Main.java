@@ -6,6 +6,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-      System.out.println();
+      Calc calculator = new Calc();
+      calculator.summ(7, 8);
     }
 }
