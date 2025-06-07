@@ -57,7 +57,7 @@ class CalcTest
         Assertions.assertEquals(9, result, "Реальность отличается от ожиданий");
     }
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "#{index} - находим сумму {0} и {1}, ожидаем {2}")
     @CsvSource({"3,4,7", "3, -4, -1", "0,0,0"})
     @DisplayName("Параметризированное суммирование")
     @Timeout(10)
@@ -69,7 +69,7 @@ class CalcTest
         Assertions.assertEquals(expectedResult, result, "Реальность отличается от ожиданий");
     }
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "#{index} - находим разность {0} и {1}, ожидаем {2}")
     @CsvSource({"4,3,1", "-4, -3, -1", "0,0,0"})
     @DisplayName("Параметризированное вычитание")
     @Timeout(10)
