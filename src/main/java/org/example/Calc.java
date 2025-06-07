@@ -2,6 +2,9 @@ package org.example;
 
 public class Calc
 {
+    public Calc() {
+    }
+
     public int summ(int a, int b)
     {
         int result;
