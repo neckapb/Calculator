@@ -66,7 +66,7 @@ class CalcTest
     {
         Calc calculator = new Calc();
         int result = calculator.summ(a, b);
-        Assertions.assertEquals(expectedResult, result, "Реальность отличается от ожиданий");
+        Assertions.assertEquals(expectedResult, result, ("Результат " + result + " не совпадает с ожидаемым значением " + expectedResult));
     }
 
     @ParameterizedTest(name = "#{index} - находим разность {0} и {1}, ожидаем {2}")
@@ -78,6 +78,6 @@ class CalcTest
     {
         Calc calculator = new Calc();
         int result = calculator.difference(a, b);
-        Assertions.assertEquals(expectedResult, result, "Реальность отличается от ожиданий");
+        Assertions.assertEquals(expectedResult, result, ("Результат " + result + " не совпадает с ожидаемым значением " + expectedResult));
     }
 }
