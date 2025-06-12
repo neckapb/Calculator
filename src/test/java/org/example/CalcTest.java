@@ -4,34 +4,27 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class CalcTest
-{
+class CalcTest {
 
     @BeforeAll
-    public static void beforeAll()
-    {
+    public static void beforeAll() {
         System.out.println("=Старт=");
     }
 
     @BeforeEach
-    public void beforeEach()
-    {
+    public void beforeEach() {
         System.out.println();
         System.out.println("результат теста:");
     }
 
     @AfterAll
-    public static void afterAll()
-    {
+    public static void afterAll() {
         System.out.println();
         System.out.println("=Финиш=");
     }
 
     @AfterEach
-    public void afterEach()
-    {
+    public void afterEach() {
         System.out.println("**********");
     }
 
@@ -39,8 +32,7 @@ class CalcTest
     @DisplayName("Проверка суммирования")
     @Timeout(10)
     @Tag("plus")
-    void summ()
-    {
+    void summ() {
         Calc calculator = new Calc();
         int result = calculator.summ(6, 9);
         Assertions.assertEquals(15, result, "Реальность отличается от ожиданий");
@@ -50,8 +42,7 @@ class CalcTest
     @DisplayName("Проверка вычитания")
     @Timeout(10)
     @Tag("minus")
-    void difference()
-    {
+    void difference() {
         Calc calculator = new Calc();
         int result = calculator.difference(12, 3);
         Assertions.assertEquals(9, result, "Реальность отличается от ожиданий");
@@ -62,8 +53,7 @@ class CalcTest
     @DisplayName("Параметризированное суммирование")
     @Timeout(10)
     @Tag("plus")
-    void summP(int a, int b, int expectedResult)
-    {
+    void summP(int a, int b, int expectedResult) {
         Calc calculator = new Calc();
         int result = calculator.summ(a, b);
         Assertions.assertEquals(expectedResult, result, ("Результат " + result + " не совпадает с ожидаемым значением " + expectedResult));
@@ -74,8 +64,7 @@ class CalcTest
     @DisplayName("Параметризированное вычитание")
     @Timeout(10)
     @Tag("minus")
-    void differenceP(int a, int b, int expectedResult)
-    {
+    void differenceP(int a, int b, int expectedResult) {
         Calc calculator = new Calc();
         int result = calculator.difference(a, b);
         Assertions.assertEquals(expectedResult, result, ("Результат " + result + " не совпадает с ожидаемым значением " + expectedResult));
